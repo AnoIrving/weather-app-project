@@ -13,12 +13,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.theme-button,
+.container {
+  color: #b7b7b7;
+}
 .theme-button {
   display: block;
   margin: 20px auto;
   padding: 12px;
+  background: #101010;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
 }
-
 .container {
   background-image: linear-gradient(#101010 1px, transparent 1px),
     linear-gradient(to right, #101010 1px, transparent 1px);
@@ -30,15 +37,18 @@ body {
   max-width: 500px;
   margin: 100px auto;
   padding: 76.5px 13px;
-  color: #e6e6e6;
 }
 .search-form-input,
 .search-form-button {
   padding: 8px;
   width: 250px;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
   border-radius: 4px;
+}
+.search-form {
+  position: relative;
+  bottom: 45px;
 }
 .search-form-input {
   background: rgb(97, 97, 97, 75%);
@@ -47,7 +57,18 @@ body {
   background: #515151;
   width: 90px;
 }
-
+h1 {
+  margin: 0 auto;
+  font-size: 60px;
+  position: relative;
+  bottom: 27px;
+}
+.current-weather {
+  text-align: left;
+}
+.week-forcast ul {
+  text-decoration: none;
+}
 footer {
   text-align: center;
 }
