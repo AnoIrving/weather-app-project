@@ -24,6 +24,8 @@ body {
   border: none;
   border-radius: 8px;
   font-size: 18px;
+  font-weight: 600;
+  box-shadow: 6px 8px 6px rgb(35, 0, 0, 90%);
 }
 .container {
   background-image: linear-gradient(#101010 1px, transparent 1px),
@@ -36,6 +38,7 @@ body {
   max-width: 500px;
   margin: 100px auto;
   padding: 69px 26px;
+  box-shadow: 18px 16px 10px rgb(35, 0, 0, 90%);
 }
 .search-form-input,
 .search-form-button {
@@ -108,9 +111,10 @@ h2 {
   margin: 0 auto;
 }
 footer {
-  color: #b7b7b7;
+  color: #a0a0a0;
   font-size: 16px;
   text-align: center;
+  font-weight: 700;
 }
 a {
   color: #000000;
