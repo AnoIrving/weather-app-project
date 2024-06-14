@@ -30,18 +30,20 @@
       <main>
         <h1 id="city"></h1>
         <div class="current-weather">
-          <h2 id="current-date">Tuesday <strong>5:07</strong></h2>
-
+          <h2 id="current-date"></h2>
           <div class="current-temp-container">
             <div class="current-temp-icon">⛅</div>
             <div class="current-temp" id="current-temp"></div>
             <div class="current-temp-unit">°F</div>
           </div>
-          <p id="conditions" class="conditions">
-            cloudy <br />
-            Humidity: <strong>63%</strong>
+          <p class="conditions">
+            <span id="conditions"></span>
             <br />
-            Wind: <strong>7mph</strong> <br />Heat Index: <strong>95°F</strong>
+            Humidity: <strong><span id="humidity"></span></strong>
+            <br />
+            Wind: <strong><span id="wind-speed"></span></strong>
+            <br />
+            Heat Index: <strong><span id="heat-index"></span></strong>
           </p>
         </div>
       </main>
