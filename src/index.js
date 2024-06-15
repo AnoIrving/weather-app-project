@@ -7,6 +7,8 @@ function updateCurrentWeather(response) {
   let heatIndexElement = document.querySelector("#heat-index");
   let dateElement = document.querySelector("#current-date");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temp-icon" /> `;
 
   dateElement.innerHTML = currentDate(date);
   heatIndexElement.innerHTML = `${Math.round(
