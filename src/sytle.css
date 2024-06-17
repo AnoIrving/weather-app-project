@@ -27,6 +27,13 @@ body {
   font-weight: 600;
   box-shadow: 6px 8px 6px rgb(35, 0, 0, 90%);
 }
+.theme-button:hover {
+  cursor: pointer;
+  background: rgb(97, 97, 97, 95%);
+  color: #101010;
+  transform: scale(1.05);
+  transition: all 150ms ease-in-out;
+}
 .container {
   background-image: linear-gradient(#101010 1px, transparent 1px),
     linear-gradient(to right, #101010 1px, transparent 1px);
@@ -60,6 +67,12 @@ body {
 .search-form-button {
   background: rgb(130, 5, 7);
   width: 90px;
+}
+.search-form-button:hover {
+  cursor: pointer;
+  background: rgb(98, 1, 1);
+  transform: scale(1.05);
+  transition: all 150ms ease-in-out;
 }
 h1,
 h2,
@@ -99,6 +112,7 @@ h2 {
   width: 78px;
   height: 78px;
   padding-top: 20px;
+  padding-right: 5px;
 }
 .current-temp-unit {
   font-weight: 500;
