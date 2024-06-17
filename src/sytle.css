@@ -18,12 +18,12 @@ body {
 }
 .theme-button {
   display: block;
-  margin: 20px auto;
-  padding: 12px;
+  margin: 10px auto;
+  padding: 10px;
   background: #101010;
   border: none;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   box-shadow: 6px 8px 6px rgb(35, 0, 0, 90%);
 }
@@ -36,8 +36,8 @@ body {
   display: block;
   text-align: center;
   max-width: 500px;
-  margin: 100px auto;
-  padding: 69px 26px;
+  margin: 20px 345px 20px 345px;
+  padding: 59px 26px 0px 26px;
   box-shadow: 18px 16px 10px rgb(35, 0, 0, 90%);
 }
 .search-form-input,
@@ -61,16 +61,7 @@ body {
   background: rgb(130, 5, 7);
   width: 90px;
 }
-h1 {
-  margin: 0 auto;
-  font-size: 70px;
-  font-weight: 400;
-  position: relative;
-  bottom: 40px;
-}
-strong {
-  color: rgb(130, 5, 7);
-}
+h1,
 h2,
 .current-temp-container,
 .current-temp,
@@ -79,44 +70,56 @@ h2,
 .conditions {
   position: relative;
 }
+h1 {
+  margin: 0 auto;
+  font-size: 70px;
+  font-weight: 400;
+  bottom: 30px;
+  line-height: 1;
+}
+strong {
+  color: rgb(130, 5, 7);
+}
 h2 {
   margin: 0 auto;
   text-align: left;
-  bottom: 48px;
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 34px;
+  font-weight: 600;
+  bottom: 30px;
 }
 .current-temp-container {
   display: flex;
   justify-content: start;
 }
 .current-temp {
-  font-size: 130px;
-  bottom: 14px;
+  font-size: 110px;
+  bottom: 24px;
 }
 .current-temp-icon {
-  font-size: 50px;
-  bottom: -20px;
+  width: 78px;
+  height: 78px;
+  padding-top: 20px;
 }
 .current-temp-unit {
   font-weight: 500;
-  font-size: 50px;
-  bottom: -6px;
+  font-size: 40px;
+  bottom: 5px;
 }
 .conditions {
   text-align: justify;
-  top: 15px;
   font-size: 24px;
   font-weight: 600;
   margin: 0 auto;
+  bottom: 20px;
 }
 footer {
   color: #a0a0a0;
-  font-size: 16px;
+  font-size: 12px;
   text-align: center;
   font-weight: 700;
+  padding-bottom: 5px;
 }
 a {
-  color: #000000;
+  color: rgb(130, 5, 7);
   font-weight: 700;
 }
