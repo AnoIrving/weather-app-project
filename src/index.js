@@ -8,7 +8,7 @@ function updateCurrentWeather(response) {
   let dateElement = document.querySelector("#current-date");
   let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
-  let apiIconUrl = response.data.condition.icon_url;
+  let apiIconUrl = response.data.condition.icon;
   let customIcon = iconMapping[apiIconUrl];
 
   iconElement.innerHTML = displayWeatherIcon(customIcon);
@@ -27,29 +27,26 @@ function displayWeatherIcon(customIcon) {
   return `<img src="${customIcon}" class="current-temp-icon"/>`;
 }
 
-function getIconMapping() {
-  return {
-    "clear-sky-day": "vampire-icons/custom-clear-sky-day.png",
-    "clear-sky-night": "vampire-icons/custom-clear-sky-night.png",
-    "few-clounds-day": "vampire-icons/custom-few-clouds.png",
-    "few-clounds-night": "vampire-icons/custom-few-clouds.png",
-    "scattered-clouds-day": "vampire-icons/custom-scattered-clouds.png",
-    "scattered-clouds-night": "vampire-icons/custom-scattered-clouds.png",
-    "broken-clonds-day": "vampire-icons/custom-broken-clouds.png",
-    "broken-clonds-night": "vampire-icons/custom-broken-clouds.png",
-    "shower-rain-day": "vampire-icons/custom-shower-rain.png",
-    "shower-rain-night": "vampire-icons/custom-shower-rain.png",
-    "rain-day": "vampire-icons/custom-shower-rain.png",
-    "rain-night": "vampire-icons/custom-shower-rain.png",
-    "thunderstorm-day": "vampire-icons/custom-thunderstom.png",
-    "thunderstorm-night": "vampire-icons/custom-thunderstom.png",
-    "snow-day": "vampire-icons/custom-snow.png",
-    "snow-night": "vampire-icons/custom-snow.png",
-    "mist-day": "vampire-icons/custom-mist.png",
-    "mist-night": "vampire-icons/custom-mist.png",
-  };
-}
-let iconMapping = getIconMapping();
+let iconMapping = {
+  "clear-sky-day": "vampire-icons/custom-clear-sky-day.png",
+  "clear-sky-night": "vampire-icons/custom-clear-sky-night.png",
+  "few-clouds-day": "vampire-icons/custom-few-clouds.png",
+  "few-clouds-night": "vampire-icons/custom-few-clouds.png",
+  "scattered-clouds-day": "vampire-icons/custom-scattered-clouds.png",
+  "scattered-clouds-night": "vampire-icons/custom-scattered-clouds.png",
+  "broken-clonds-day": "vampire-icons/custom-broken-clouds.png",
+  "broken-clonds-night": "vampire-icons/custom-broken-clouds.png",
+  "shower-rain-day": "vampire-icons/custom-shower-rain.png",
+  "shower-rain-night": "vampire-icons/custom-shower-rain.png",
+  "rain-day": "vampire-icons/custom-shower-rain.png",
+  "rain-night": "vampire-icons/custom-shower-rain.png",
+  "thunderstorm-day": "vampire-icons/custom-thunderstom.png",
+  "thunderstorm-night": "vampire-icons/custom-thunderstom.png",
+  "snow-day": "vampire-icons/custom-snow.png",
+  "snow-night": "vampire-icons/custom-snow.png",
+  "mist-day": "vampire-icons/custom-mist.png",
+  "mist-night": "vampire-icons/custom-mist.png",
+};
 
 function currentDate(date) {
   let days = [
