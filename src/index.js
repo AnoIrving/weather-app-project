@@ -21,12 +21,51 @@ function updateCurrentWeather(response) {
   conditionsElement.innerHTML = response.data.condition.description;
   cityElement.innerHTML = response.data.city;
   currentTempElement.innerHTML = Math.round(response.data.temperature.current);
+
+  getForecast(response.data.city);
+}
+
+function searchCity(city) {
+  let apiKey = "86c4028fc5a4ecb6d0b3otf13026c027";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(updateCurrentWeather);
+}
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-form-input");
+  searchCity(searchInput.value);
+}
+function getForecast(city) {
+  apiKey = "86c4028fc5a4ecb6d0b3otf13026c027";
+  apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+    <img src="vampire-icons/custom-shower-rain.png" alt="" width="42" class="forecast-icon"/>
+    <div class="col-2">
+    <div class="forecast-day">${day}</div>
+    <div class="forecast-temp">
+    <span class="forecast-temp-high">95°</span>
+    <span class="forecast-temp-low">78°</span>
+    </div>
+    </div>
+    `;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
 }
 
 function displayWeatherIcon(customIcon) {
   return `<img src="${customIcon}" class="current-temp-icon"/>`;
 }
-
 let iconMapping = {
   "clear-sky-day": "vampire-icons/custom-clear-sky-day.png",
   "clear-sky-night": "vampire-icons/custom-clear-sky-night.png",
@@ -48,32 +87,6 @@ let iconMapping = {
   "mist-night": "vampire-icons/custom-mist.png",
 };
 
-function displayForecast() {
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  let forecastHtml = "";
-
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
-   
-    <img src="vampire-icons/custom-shower-rain.png" alt="" width="42" class="forecast-icon"/>
-    
-    <div class="col-2">
-    <div class="forecast-day">${day}</div>
-    <div class="forecast-temp">
-    <span class="forecast-temp-high">95°</span>
-    <span class="forecast-temp-low">78°</span>
-    </div>
-    </div>
-    `;
-  });
-  let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = forecastHtml;
-}
-
-displayForecast();
-
 function currentDate(date) {
   let days = [
     "Sunday",
@@ -93,18 +106,6 @@ function currentDate(date) {
   }
 
   return `<span class="tint">${day}</span> <strong>${hours}:${minutes}</strong>`;
-}
-
-function searchCity(city) {
-  let apiKey = "86c4028fc5a4ecb6d0b3otf13026c027";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(updateCurrentWeather);
-}
-
-function handleSearchSubmit(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-form-input");
-  searchCity(searchInput.value);
 }
 
 let searchFormElement = document.querySelector("#search-form");
