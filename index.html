@@ -29,24 +29,7 @@
 
       <main>
         <h1 id="city"></h1>
-        <div class="forecast">
-          <div class="row">
-            <div class="forecast-icon">
-              <img
-                src="vampire-icons/custom-shower-rain.png"
-                alt=""
-                width="32"
-              />
-            </div>
-            <div class="col-2">
-              <div class="forecast-day">Tue</div>
-              <div class="forecast-temp">
-                <span class="forecast-temp-high">95°</span>
-                <span class="forecast-temp-low">78°</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="forecast" id="forecast"></div>
         <div class="current-weather">
           <h2 id="current-date"></h2>
           <div class="current-temp-container">
@@ -55,13 +38,16 @@
             <div class="current-temp-unit">°F</div>
           </div>
           <p class="conditions">
-            <span id="conditions"></span>
+            <span class="tint" id="conditions"></span>
             <br />
-            Humidity: <strong><span id="humidity"></span></strong>
+            <span class="tint">Humidity: </span
+            ><strong><span id="humidity"></span></strong>
             <br />
-            Wind: <strong><span id="wind-speed"></span></strong>
+            <span class="tint">Wind: </span
+            ><strong><span id="wind-speed"></span></strong>
             <br />
-            Heat Index: <strong><span id="heat-index"></span></strong>
+            <span class="tint">Heat Index: </span
+            ><strong><span id="heat-index"></span></strong>
           </p>
         </div>
       </main>

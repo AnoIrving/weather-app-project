@@ -48,6 +48,32 @@ let iconMapping = {
   "mist-night": "vampire-icons/custom-mist.png",
 };
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+   
+    <img src="vampire-icons/custom-shower-rain.png" alt="" width="42" class="forecast-icon"/>
+    
+    <div class="col-2">
+    <div class="forecast-day">${day}</div>
+    <div class="forecast-temp">
+    <span class="forecast-temp-high">95°</span>
+    <span class="forecast-temp-low">78°</span>
+    </div>
+    </div>
+    `;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
+displayForecast();
+
 function currentDate(date) {
   let days = [
     "Sunday",
@@ -66,7 +92,7 @@ function currentDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} <strong>${hours}:${minutes}</strong>`;
+  return `<span class="tint">${day}</span> <strong>${hours}:${minutes}</strong>`;
 }
 
 function searchCity(city) {

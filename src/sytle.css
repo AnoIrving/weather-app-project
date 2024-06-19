@@ -76,6 +76,8 @@ body {
 }
 h1,
 h2,
+.col-2,
+.forecast-icon,
 .current-weather,
 .current-temp-container,
 .current-temp,
@@ -96,16 +98,21 @@ strong {
 }
 main {
   max-height: 430px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.tint {
+  opacity: 0.8;
 }
 h2 {
   margin: 0 auto;
   text-align: left;
   font-size: 34px;
   font-weight: 600;
-  bottom: 30px;
+  bottom: 40px;
 }
 .current-weather {
-  bottom: 40px;
+  bottom: 370px;
 }
 .current-temp-container {
   display: flex;
@@ -136,22 +143,32 @@ h2 {
 }
 .forecast {
   display: flex;
-  justify-content: end;
-}
-.row {
-  display: flex;
-  justify-content: flex-start;
-}
-.forecast-icon {
-  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
 }
 
+.forecast-icon {
+  margin: 0;
+  margin-right: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  bottom: 25px;
+}
+.col-2 {
+  bottom: 70px;
+  margin: 0;
+  line-height: 1;
+}
 .forecast-day {
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 19px;
+  font-weight: 600;
+  opacity: 0.8;
 }
 .forecast-temp {
-  font-size: 14px;
+  font-size: 18px;
 }
 .forecast-temp-low {
   opacity: 0.6;
