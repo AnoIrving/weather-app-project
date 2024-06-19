@@ -154,7 +154,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  bottom: 25px;
+  bottom: 30px;
+  width: 42px;
 }
 .col-2 {
   bottom: 70px;
