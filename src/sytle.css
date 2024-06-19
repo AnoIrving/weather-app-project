@@ -76,6 +76,7 @@ body {
 }
 h1,
 h2,
+.current-weather,
 .current-temp-container,
 .current-temp,
 .current-temp-icon,
@@ -93,12 +94,18 @@ h1 {
 strong {
   color: rgb(130, 5, 7);
 }
+main {
+  max-height: 430px;
+}
 h2 {
   margin: 0 auto;
   text-align: left;
   font-size: 34px;
   font-weight: 600;
   bottom: 30px;
+}
+.current-weather {
+  bottom: 40px;
 }
 .current-temp-container {
   display: flex;
@@ -123,8 +130,31 @@ h2 {
   text-align: justify;
   font-size: 24px;
   font-weight: 600;
+  line-height: 1.5;
   margin: 0 auto;
   bottom: 20px;
+}
+.forecast {
+  display: flex;
+  justify-content: end;
+}
+.row {
+  display: flex;
+  justify-content: flex-start;
+}
+.forecast-icon {
+  margin: 0 auto;
+}
+
+.forecast-day {
+  margin: 0 auto;
+  font-size: 18px;
+}
+.forecast-temp {
+  font-size: 14px;
+}
+.forecast-temp-low {
+  opacity: 0.6;
 }
 footer {
   color: #a0a0a0;
